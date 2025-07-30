@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0 !important;
+    font-family: sans-serif;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+header {
+    height: 140px;
+}
+.prpl-zero{
+    padding-right: 0 !important;
+    padding-left: 0 !important;    
+}
+.mrml-zero{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.mrml-auto{
+    margin-right: auto !important;
+    margin-left: auto !important;
+}

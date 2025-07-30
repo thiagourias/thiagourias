@@ -8,3 +8,6 @@ nav a {
   margin-right: 1rem;
   text-decoration: none;
 }
+.h-max{
+  max-height: 100px !important;
+}
