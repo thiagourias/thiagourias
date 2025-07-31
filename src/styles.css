@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'Cocogoose';
+  src: url('./assets/fonts/Cocogoose-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
     margin: 0 !important;
-    font-family: sans-serif;
+    font-family: 'Cocogoose', sans-serif;
+    color: white;
 }
 
 img {
@@ -20,4 +27,7 @@ img {
 .mrml-auto{
     margin-right: auto !important;
     margin-left: auto !important;
+}
+.w-100{
+    width: 100% !important;
 }

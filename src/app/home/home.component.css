@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Cocogoose';
+    src: url('../../assets/fonts/Cocogoose-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.banner{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.banner .content{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: 100px;
+    font-family: 'Cocogoose', sans-serif;
+    color: white;
+}
+.main-content{
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+}
