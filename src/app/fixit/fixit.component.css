@@ -29,8 +29,8 @@
     color: white;
 }
 .main-content{
-    background-color: rgba(0, 0, 0, 0.4); 
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: block;
     margin-right: auto;
     margin-left: auto;
     border-radius: 5px;
@@ -45,3 +45,11 @@
     margin: 0 auto;     /* centraliza se necessário */
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}

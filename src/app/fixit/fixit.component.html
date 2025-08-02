@@ -2,13 +2,9 @@
     <video autoplay muted loop playsinline class="w-100">
         <source src="assets/videos/background_webm.webm" type="video/webm">
         Seu navegador não suporta vídeo.
-
-
-        teste
     </video>
-    <div class="content">
+    <div class="content" id="content">
         <div class="row prpl-zero mrml-zero">
-
             <div class="col-9 main-content">
                 <div class="row w-100 p-4">
                     <div class="col-2">
@@ -16,9 +12,17 @@
                     </div>
                     <div class="col-10">
                         <h1 class="text-center">THIAGO URIAS</h1>
-                        <p class="text-center">UX/UI DESIGNER AND FRONTEND DEVELOPER.</p>
-                        <h3 class="text-center">TURNING DREAMS INTO < CODE >.</h3>
+                        <p class="text-center fade-in" [class.visible]="showP1">UX/UI DESIGNER AND FRONTEND DEVELOPER.</p>
+                        <h3 class="text-center fade-in" [class.visible]="showH3">TURNING DREAMS INTO < CODE >.</h3>
                     </div>
+                </div>
+
+                <div class="row w-100 p-4">
+                    <div class="col-12 text-center fade-in" [class.visible]="showH4">
+                        <p class="text-center">I am a UX/UI designer and frontend developer with a passion for creating user-friendly and visually appealing digital experiences. My goal is to turn your ideas into reality, crafting solutions that not only look great but also function seamlessly.</p>
+                        <p class="text-center">Let's work together to bring your vision to life!</p>
+                    </div>
+
                 </div>
             </div>
         </div>
