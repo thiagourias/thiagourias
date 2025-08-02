@@ -1,1 +1,36 @@
-<p>about works!</p>
+<div class="about-properties">
+    <div class="row prpl-zero mrml-zero">
+        <div class="col-9 mrml-auto">
+            <h1 class="text-center">EXPERIENCE AND EDUCATIONAL</h1>
+            <p class="text-center">Thiago Urias is a UX/UI designer and frontend developer with a passion for creating
+                user-friendly and visually appealing digital experiences. His goal is to turn your ideas into reality,
+                crafting solutions that not only look great but also function seamlessly.</p>
+            <p class="text-center">Let's work together to bring your vision to life!</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="timeline">
+    <div class="container mrml-zero" [ngClass]="i % 2 === 0 ? 'left' : 'right'"
+        *ngFor="let item of timeline; let i = index">
+        <div class="date">{{ item.date }}</div>
+        <i class="icon fa" [ngClass]="item.icon"></i>
+        <div class="content">
+            <h2>{{ item.title }}</h2>
+            <p class="fw-bold">
+                {{ item.subtitle }}
+            </p>
+            <p class="fw-bold">
+                {{ item.subsubtitle }}
+            </p>
+            <p>
+                {{ item.description }}
+            </p>
+            <p *ngIf="item.skills" class="pt-2">
+               Skills: {{ item.skills }}
+            </p>
+        </div>
+    </div>
+</div>
