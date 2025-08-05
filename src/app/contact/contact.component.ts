@@ -15,9 +15,24 @@ export class ContactComponent {
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      console.log('Form Data:', this.formData);
-      alert('Mensagem enviada com sucesso!');
-      } else {
+      const encoded = [
+        `form-name=contact`, // Adiciona o nome do formulário
+        ...Object.keys(this.formData).map(
+          (key) =>
+            encodeURIComponent(key) + '=' + encodeURIComponent(this.formData[key as keyof typeof this.formData])
+        ),
+      ].join('&');
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(this.formData).toString(),
+      })
+        .then(() => {
+          window.location.href = '/success';
+        })
+        .catch((error) => alert(error));
+    } else {
       alert('Por favor, preencha todos os campos obrigatórios.');
     }
   }
