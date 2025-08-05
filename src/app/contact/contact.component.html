@@ -1,1 +1,46 @@
-<p>contact works!</p>
+<form
+  name="contact"
+  method="POST"
+  netlify
+  netlify-honeypot="campo-bot"
+  class="contato-formulario"
+  (ngSubmit)="onSubmit(contactForm)"
+  #contactForm="ngForm"
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <p style="display: none">
+    <label>Não preencha: <input name="campo-bot" /></label>
+  </p>
+
+  <label for="campo-nome" class="contato-label">Nome</label>
+  <input
+    type="text"
+    id="campo-nome"
+    name="nome"
+    class="contato-input"
+    required
+    [(ngModel)]="formData.nome"
+  />
+
+  <label for="campo-email" class="contato-label">Email</label>
+  <input
+    type="email"
+    id="campo-email"
+    name="email"
+    class="contato-input"
+    required
+    [(ngModel)]="formData.email"
+  />
+
+  <label for="campo-mensagem" class="contato-label">Mensagem</label>
+  <textarea
+    id="campo-mensagem"
+    name="mensagem"
+    class="contato-textarea"
+    rows="5"
+    required
+    [(ngModel)]="formData.mensagem"
+  ></textarea>
+
+  <button type="submit" class="contato-botao">Enviar mensagem</button>
+</form>

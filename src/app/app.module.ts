@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AboutComponent } from './about/about.component';
 import { FixitComponent } from './fixit/fixit.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { FixitComponent } from './fixit/fixit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   
   ],
   providers: [],
