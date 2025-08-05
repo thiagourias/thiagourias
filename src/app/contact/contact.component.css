@@ -1,4 +1,4 @@
-.contato-secao {
+.contact-section {
   background-color: #1f1f1f;
   padding: 40px;
   border-radius: 10px;
@@ -8,7 +8,7 @@
 }
 
 /* Título */
-.contato-titulo {
+.contact-title {
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
@@ -16,7 +16,7 @@
 }
 
 /* Labels */
-.contato-label {
+.contact-label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
@@ -24,8 +24,8 @@
 }
 
 /* Inputs e textarea */
-.contato-input,
-.contato-textarea {
+.contact-input,
+.contact-textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
@@ -36,14 +36,14 @@
   font-size: 1rem;
 }
 
-.contato-input:focus,
-.contato-textarea:focus {
+.contact-input:focus,
+.contact-textarea:focus {
   outline: none;
   background-color: #3a3a3a;
 }
 
 /* Botão */
-.contato-botao {
+.contact-button {
   width: 100%;
   padding: 12px;
   background-color: #ff4c4c;
@@ -55,6 +55,6 @@
   transition: background-color 0.3s ease;
 }
 
-.contato-botao:hover {
+.contact-button:hover {
   background-color: #d83a3a;
 }

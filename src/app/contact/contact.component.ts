@@ -8,8 +8,17 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent {
   formData = {
-    nome: '',
+    name: '',
     email: '',
-    mensagem: '',
+    message: '',
   };
+
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+      console.log('Form Data:', this.formData);
+      alert('Mensagem enviada com sucesso!');
+      } else {
+      alert('Por favor, preencha todos os campos obrigatórios.');
+    }
+  }
 }
