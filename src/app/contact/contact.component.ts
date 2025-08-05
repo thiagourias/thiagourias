@@ -29,7 +29,7 @@ export class ContactComponent {
         body: new URLSearchParams(this.formData).toString(),
       })
         .then(() => {
-          window.location.href = '/success';
+          
         })
         .catch((error) => alert(error));
     } else {
