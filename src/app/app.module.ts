@@ -11,6 +11,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { AboutComponent } from './about/about.component';
 import { FixitComponent } from './fixit/fixit.component';
 import { FormsModule } from '@angular/forms';
+import { SuccessComponent } from './success/success.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     NotfoundComponent,
     AboutComponent,
-    FixitComponent
+    FixitComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
