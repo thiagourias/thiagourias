@@ -6,8 +6,11 @@
   class="contato-formulario"
   (ngSubmit)="onSubmit(contactForm)"
   #contactForm="ngForm"
+  data-netlify-recaptcha="true"
+  data-netlify="true"
 >
   <input type="hidden" name="form-name" value="contact" />
+  
   <p style="display: none">
     <label>Não preencha: <input name="campo-bot" /></label>
   </p>
@@ -41,6 +44,6 @@
     required
     [(ngModel)]="formData.mensagem"
   ></textarea>
-
+  <div data-netlify-recaptcha="true"></div>
   <button type="submit" class="contato-botao">Enviar mensagem</button>
 </form>
