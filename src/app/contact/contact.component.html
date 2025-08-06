@@ -10,40 +10,54 @@
   class="form-container"
 >
   <!-- Hidden field for Netlify -->
-  <input type="hidden" name="form-name" value="contact" />
-  <p class="hidden">
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
-
   <!-- Name -->
-  <label for="name">Name</label>
-  <input
-    type="text"
-    id="name"
-    name="name"
-    [(ngModel)]="formData.name"
-    required
-  />
+<label for="name">Name</label>
+<input
+  type="text"
+  id="name"
+  name="name"
+  [(ngModel)]="formData.name"
+  #name="ngModel"
+  required
+  minlength="2"
+/>
+<div class="error" *ngIf="name.invalid && name.touched">
+  <small *ngIf="name.errors?.['required']">Name is required.</small>
+  <small *ngIf="name.errors?.['minlength']">Name must be at least 2 characters.</small>
+</div>
 
-  <!-- Email -->
-  <label for="email">Email</label>
-  <input
-    type="email"
-    id="email"
-    name="email"
-    [(ngModel)]="formData.email"
-    required
-  />
+<!-- Email -->
+<label for="email">Email</label>
+<input
+  type="email"
+  id="email"
+  name="email"
+  [(ngModel)]="formData.email"
+  #email="ngModel"
+  required
+  email
+/>
+<div class="error" *ngIf="email.invalid && email.touched">
+  <small *ngIf="email.errors?.['required']">Email is required.</small>
+  <small *ngIf="email.errors?.['email']">Enter a valid email address.</small>
+</div>
 
-  <!-- Message -->
-  <label for="message">Message</label>
-  <textarea
-    id="message"
-    name="message"
-    [(ngModel)]="formData.message"
-    rows="5"
-    required
-  ></textarea>
+<!-- Message -->
+<label for="message">Message</label>
+<textarea
+  id="message"
+  name="message"
+  [(ngModel)]="formData.message"
+  #message="ngModel"
+  required
+  minlength="10"
+  rows="5"
+></textarea>
+<div class="error" *ngIf="message.invalid && message.touched">
+  <small *ngIf="message.errors?.['required']">Message is required.</small>
+  <small *ngIf="message.errors?.['minlength']">Message must be at least 10 characters.</small>
+</div>
+
 
   <!-- Captcha -->
   <div data-netlify-recaptcha="true"></div>
