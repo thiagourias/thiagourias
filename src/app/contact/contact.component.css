@@ -1,60 +1,55 @@
-.contact-section {
-  background-color: #1f1f1f;
-  padding: 40px;
-  border-radius: 10px;
+.form-container {
   max-width: 500px;
-  width: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Título */
-.contact-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #ff4c4c;
-}
-
-/* Labels */
-.contact-label {
+label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #cccccc;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
 }
 
-/* Inputs e textarea */
-.contact-input,
-.contact-textarea {
+input,
+textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 6px;
-  background-color: #2c2c2c;
-  color: #ffffff;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s ease;
 }
 
-.contact-input:focus,
-.contact-textarea:focus {
+input:focus,
+textarea:focus {
+  border-color: #0077cc;
   outline: none;
-  background-color: #3a3a3a;
+  background-color: #fff;
 }
 
-/* Botão */
-.contact-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #ff4c4c;
-  color: #ffffff;
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #0077cc;
+  color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
-.contact-button:hover {
-  background-color: #d83a3a;
+button:hover {
+  background-color: #005fa3;
+}
+
+.hidden {
+  display: none;
 }

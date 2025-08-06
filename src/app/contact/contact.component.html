@@ -2,48 +2,52 @@
   name="contact"
   method="POST"
   netlify
-  netlify-honeypot="field-bot"
-  class="contact-form"
-  (ngSubmit)="onSubmit(contactForm)"
-  #contactForm="ngForm"
-  data-netlify-recaptcha="true"
+  netlify-honeypot="bot-field"
   data-netlify="true"
+  data-netlify-recaptcha="true"
+  (ngSubmit)="onSubmit(form)"
+  #form="ngForm"
+  class="form-container"
 >
+  <!-- Hidden field for Netlify -->
   <input type="hidden" name="form-name" value="contact" />
-  
-  <p style="display: none">
-    <label>Não preencha: <input name="field-bot" /></label>
+  <p class="hidden">
+    <label>Don’t fill this out: <input name="bot-field" /></label>
   </p>
 
-  <label for="field-name" class="contact-label">name</label>
+  <!-- Name -->
+  <label for="name">Name</label>
   <input
     type="text"
-    id="field-name"
+    id="name"
     name="name"
-    class="contact-input"
-    required
     [(ngModel)]="formData.name"
+    required
   />
 
-  <label for="field-email" class="contact-label">Email</label>
+  <!-- Email -->
+  <label for="email">Email</label>
   <input
     type="email"
-    id="field-email"
+    id="email"
     name="email"
-    class="contact-input"
-    required
     [(ngModel)]="formData.email"
+    required
   />
 
-  <label for="field-message" class="contact-label">message</label>
+  <!-- Message -->
+  <label for="message">Message</label>
   <textarea
-    id="field-message"
+    id="message"
     name="message"
-    class="contact-textarea"
+    [(ngModel)]="formData.message"
     rows="5"
     required
-    [(ngModel)]="formData.message"
   ></textarea>
+
+  <!-- Captcha -->
   <div data-netlify-recaptcha="true"></div>
-  <button type="submit" class="contact-button">Enviar mensagem</button>
+
+  <!-- Submit -->
+  <button type="submit">Send</button>
 </form>
