@@ -9,6 +9,10 @@ interface TimelineItem {
   skills?: string;
   description: string;
 }
+interface SkillsItem {
+  skillTitle?: string;
+  skillDescription?: string;
+}
 
 @Component({
   selector: 'app-about',
@@ -52,7 +56,7 @@ export class AboutComponent {
       icon: 'fa-code',
       title: 'FRONTEND DEVELOPER',
       subtitle: 'Frontend Developer at Basis Tecnologia da Informação.',
-      subsubtitle : 'Hello World! :)',
+      subsubtitle: 'Hello World! :)',
       description: 'I worked with a development platform called Outsystems. After a few projects using this framework, I began using JavaScript, CSS, HTML, Protractor, and Angular 1. Throughout development, we used the agile methodology, adhering to all the prescribed procedures. I also had experience as a requirements analyst and developed some manuals and screen prototypes, which I worked directly with the client. ​ Skills: Protractor · OutSystems · AngularJS · Metodologias ágeis no desenvolvimento web · JavaScript',
       skills: 'OutSystems · AngularJS · JavaScript · Protractor · Agile Methodologies'
     },
@@ -69,7 +73,7 @@ export class AboutComponent {
       icon: 'fa-code',
       title: 'FRONTEND DEVELOPER',
       subtitle: 'Frontend Developer at Brazil\'s Senate',
-      description: "I worked as a front-end developer and was responsible for all front-end development for the team. My team was creating platforms for internal Senate use and external use by the general public. I used technologies such as: JavaScript, HTML, CSS, Bootstrap, JQuery, Python, Django, Ruby on Rails, Moodle, GitHub, GitLab, Docker, JIRA, Trello, Slack, Pentaho, OSCM. The platforms I developed were: the CAPACITA Portal, the model school's Moodle theme, the Brazilian Legislative Institute's (ILB) Moodle theme, the model school's web service integration, the INTERLEGIS authentication center, the legislative virtual school (EVL) portal, the INTERLEGIS project dashboard, the ILB information management system, the IT coordination information dashboard, and the Senate's educational knowledge portal page.", 
+      description: "I worked as a front-end developer and was responsible for all front-end development for the team. My team was creating platforms for internal Senate use and external use by the general public. I used technologies such as: JavaScript, HTML, CSS, Bootstrap, JQuery, Python, Django, Ruby on Rails, Moodle, GitHub, GitLab, Docker, JIRA, Trello, Slack, Pentaho, OSCM. The platforms I developed were: the CAPACITA Portal, the model school's Moodle theme, the Brazilian Legislative Institute's (ILB) Moodle theme, the model school's web service integration, the INTERLEGIS authentication center, the legislative virtual school (EVL) portal, the INTERLEGIS project dashboard, the ILB information management system, the IT coordination information dashboard, and the Senate's educational knowledge portal page.",
       skills: 'JavaScript · HTML · CSS · Bootstrap · GitHub · Python · Django · Ruby on Rails · Moodle · Docker · JIRA · Trello · Slack'
     },
     {
@@ -77,8 +81,8 @@ export class AboutComponent {
       icon: 'fa-code',
       title: 'Computer Science Teacher',
       subtitle: 'Computer Science Teacher​',
-      description: 'As a Computer Science undergraduate student at the University of Brasília (UnB), I taught computer science to students aged 9 and 10 at a public school in Asa Norte (Brasília). The main focus of the classes was basic computing, aiming to develop the students\' computational thinking. The topics covered and taught were: proper use of a mouse and keyboard, how to connect and disconnect computer cables, search online, edit documents and text, create slideshows, develop typing skills, develop logical thinking skills, and how to use tablets. All classes were planned and taught in collaboration with my partner Artur. We made all the materials created public to help other volunteers and teachers who want to teach this topic to children.', 
-      skills: 'Computational Thinking · IT Class · Teaching · Development of computational skills', 
+      description: 'As a Computer Science student at the University of Brasília (UnB), I taught basic computing classes to children aged 9 to 10 at a public school in Brasília. The focus was on developing computational thinking, covering everything from hardware usage (mouse, keyboard) to creating documents, conducting online research, and building logical reasoning skills. All teaching materials, created in collaboration with a colleague, were made publicly available.',
+      skills: 'Computational Thinking · IT Class · Teaching · Development of computational skills',
     },
     {
       date: '2020',
@@ -95,6 +99,33 @@ export class AboutComponent {
       subtitle: 'IT mid-level assistant at Caixa Econômica Federal.​',
       description: 'I passed the public exam and became a federal civil servant in 2021. Working as front-end developer in the social programs community at Caixa Econômica Federal. The languages/frameworks/technologies I use in the projects I\'m responsible for are: Angular 11, TypeScript, HTML, SCSS, Figma and Azure. I also work as a Scrum Master and substitute IT project coordinator. Skills: HTML5 · Scrum Master · SCSS · Angular · Azure DevOps · Project Management · FIGMA · GIT',
       skills: 'Angular · TypeScript · HTML · SCSS · Figma · Azure DevOps · Scrum Master · Project Management',
+    },
+  ];
+
+  skills: SkillsItem[] = [
+    {
+      skillTitle: 'Frontend Development',
+      skillDescription: 'Angular, JavaScript, HTML, SCSS, Bootstrap',
+    },
+    {
+      skillTitle: 'Agile Methodologies',
+      skillDescription: 'Scrum, Kanban, Trello, JIRA',
+    },
+    {
+      skillTitle: 'Design & Prototyping',
+      skillDescription: 'Figma, UX/UI',
+    },
+    {
+      skillTitle: 'Project Management',
+      skillDescription: 'Azure DevOps, GitHub, GitLab',
+    },
+    {
+      skillTitle: 'Infrastructure & Support',
+      skillDescription: 'ITIL, Service Desk, Micro Focus',
+    },
+    {
+      skillTitle: 'Education & Training',
+      skillDescription: 'Computer Science Licentiate, teaching computing to children',
     },
   ];
 }

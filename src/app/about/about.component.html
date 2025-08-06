@@ -1,15 +1,25 @@
 <div class="about-properties">
-    <div class="row prpl-zero mrml-zero">
-        <div class="col-9 mrml-auto">
-            <h1 class="text-center">EXPERIENCE AND EDUCATIONAL</h1>
-            <p class="text-center">Thiago Urias is a UX/UI designer and frontend developer with a passion for creating
-                user-friendly and visually appealing digital experiences. His goal is to turn your ideas into reality,
-                crafting solutions that not only look great but also function seamlessly.</p>
-            <p class="text-center">Let's work together to bring your vision to life!</p>
+    <div class="section-header">
+        <h1>ABOUT ME AND CARRER</h1>
+        <p>
+            Thiago Urias is a UX/UI designer and frontend developer passionate about crafting intuitive and visually
+            stunning digital experiences. His goal is to turn ideas into reality by building solutions that not only
+            look great but also work smoothly.
+        </p>
+    </div>
+
+    <div class="about-content">
+        <div class="about-image">
+            <img src="assets/images/picture_thiago.JPEG" alt="Foto de Thiago Urias Hirae" class="profile-picture">
+        </div>
+        <div class="about-skills">
+            <h2>SKILLS</h2>
+            <p *ngFor="let item of skills">
+                <strong>{{ item.skillTitle }}:</strong> {{ item.skillDescription }}
+            </p>
         </div>
     </div>
 </div>
-
 
 
 <div class="timeline">
@@ -29,7 +39,7 @@
                 {{ item.description }}
             </p>
             <p *ngIf="item.skills" class="pt-2">
-               Skills: {{ item.skills }}
+                Skills: {{ item.skills }}
             </p>
         </div>
     </div>
