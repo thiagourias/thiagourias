@@ -83,7 +83,7 @@ export class ThisSiteComponent {
       image: 'assets/images/logos/github_logo.webp',
     },
     {
-      titleLogos: 'Godaddy',
+      titleLogos: 'GoDaddy',
       image: 'assets/images/logos/godaddy_logo.png',
     },
     {
