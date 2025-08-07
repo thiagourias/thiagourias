@@ -1,0 +1,48 @@
+<div class="this-site-container col-9 mrml-auto mt-5 mb-custom">
+    <div class="text-center mt-3 mb-3 color-white">
+        <h1>HOW DID I MADE IT?</h1>
+    </div>
+    <div class="text-center mt-3 mb-3 color-white">
+        <p>This website thiagourias.dev it's just a small demonstration of my knowledge. Are you not interested in hire
+            me, but want to make a website just like this? No problem! I like to help!</p>
+        <p>Those are some steps that I followed to reach this result!</p>
+    </div>
+
+    <div>
+        <div class="row mrml-zero prpl-zero">
+            <div class="col-3 p-2" *ngFor="let item of thisSiteCards; let i = index">
+                <div class="grid-container">
+                    <div class="card">
+                        <div class="title color-black">{{item.title}}</div>
+                        <div class="icon"><i [ngClass]="item.icon"></i></div>
+                        <div class="content ">
+                            <p class="color-black">{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-5 mb-5">
+            <p class="color-white">And that's it! If you want to see more details about how I made this website, you can
+                check out the code on my GitHub repository
+                <a href="https://github.com/thiagourias/thiagourias" class="color-white"><i
+                        class="fa-brands fa-github"></i></a>.
+            </p>
+        </div>
+        <div class="text-center mt-3 mb-3 color-white">
+            <h1>TECHNOLOGIES & FRAMEWORKS USED</h1>
+        </div>
+        <div class="row mrml-zero prpl-zero text-center mt-5 mb-5">
+
+            <div class="col-3 p-2" *ngFor="let logo of thisSiteLogos; let i = index">
+                <div class="div-logo-properties">
+                    <h3 class="pt-4 pb-2">{{logo.titleLogos}}</h3>
+                    <img src="{{logo.image}}" alt="Angular Logo" class="p-4 logo-img-prop" />
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -12,6 +12,7 @@ import { FixitComponent } from './fixit/fixit.component';
 import { FormsModule } from '@angular/forms';
 import { SuccessComponent } from './success/success.component';
 import { ContactComponent } from './contact/contact.component';
+import { ThisSiteComponent } from './this-site/this-site.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     FixitComponent,
     SuccessComponent,
-    ContactComponent
+    ContactComponent,
+    ThisSiteComponent
   ],
   imports: [
     BrowserModule,

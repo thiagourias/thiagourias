@@ -57,14 +57,14 @@ export class AboutComponent {
       title: 'FRONTEND DEVELOPER',
       subtitle: 'Frontend Developer at Basis Tecnologia da Informação.',
       subsubtitle: 'Hello World! :)',
-      description: 'I worked with a development platform called Outsystems. After a few projects using this framework, I began using JavaScript, CSS, HTML, Protractor, and Angular 1. Throughout development, we used the agile methodology, adhering to all the prescribed procedures. I also had experience as a requirements analyst and developed some manuals and screen prototypes, which I worked directly with the client. ​ Skills: Protractor · OutSystems · AngularJS · Metodologias ágeis no desenvolvimento web · JavaScript',
+      description: 'Experience as a developer using the OutSystems platform and web technologies such as JavaScript, CSS, HTML, and AngularJS. Also have skills in automated testing with Protractor and experience with agile methodologies. My role went beyond just coding, as I also worked as a requirements analyst, creating manuals and prototypes while interacting directly with clients.',
       skills: 'OutSystems · AngularJS · JavaScript · Protractor · Agile Methodologies'
     },
     {
       date: '2018',
       icon: 'fa-code',
       title: 'INFORMATION TECHNOLOGY SUPPORT ANALYST',
-      subtitle: "Information Technology Support Analyst at ESMPU (Higher School of the Public Prosecutor's Office of the Union)",
+      subtitle: "Information Technology Support Analyst at ESMPU",
       description: 'I worked as an intern at the Federal Public Prosecutor\'s Office (ESMPU). I was responsible for providing support to all public employees at the school for activities involving computing. My responsibilities included troubleshooting network issues, formatting and configuring computers, providing software support, and installing and configuring paid software, such as Tableau.',
       skills: 'IT Support · IT Service Desk · IT Operations'
     },
@@ -73,7 +73,7 @@ export class AboutComponent {
       icon: 'fa-code',
       title: 'FRONTEND DEVELOPER',
       subtitle: 'Frontend Developer at Brazil\'s Senate',
-      description: "I worked as a front-end developer and was responsible for all front-end development for the team. My team was creating platforms for internal Senate use and external use by the general public. I used technologies such as: JavaScript, HTML, CSS, Bootstrap, JQuery, Python, Django, Ruby on Rails, Moodle, GitHub, GitLab, Docker, JIRA, Trello, Slack, Pentaho, OSCM. The platforms I developed were: the CAPACITA Portal, the model school's Moodle theme, the Brazilian Legislative Institute's (ILB) Moodle theme, the model school's web service integration, the INTERLEGIS authentication center, the legislative virtual school (EVL) portal, the INTERLEGIS project dashboard, the ILB information management system, the IT coordination information dashboard, and the Senate's educational knowledge portal page.",
+      description: "As a front-end developer, I was responsible for the development of several platforms for both internal Senate use and the general public. My main responsibilities included creating portals, Moodle themes, and information management systems. I used a wide range of technologies, including JavaScript, HTML, CSS, Bootstrap, JQuery, Python, Django, Ruby on Rails, Moodle, and tools like GitHub, Docker, JIRA, and Slack.",
       skills: 'JavaScript · HTML · CSS · Bootstrap · GitHub · Python · Django · Ruby on Rails · Moodle · Docker · JIRA · Trello · Slack'
     },
     {
@@ -89,7 +89,7 @@ export class AboutComponent {
       icon: 'fa-code',
       title: 'INFORMATION TECHNOLOGY SUPPORT ANALYST',
       subtitle: 'INFORMATION TECHNOLOGY SUPPORT ANALYST at Brazil\'s Central Bank - BACEN.',
-      description: 'I was responsible for supporting the Information Technology Department (DEINF) team at the Central Bank of Brazil (BACEN), more specifically the team responsible for the Micro Focus Service Manager software. I was responsible for supporting the Information Technology Department (DEINF) team at the Central Bank of Brazil (BACEN), more specifically the team responsible for the Micro Focus Service Manager software.',
+      description: 'I was responsible for supporting the Information Technology Department (DEINF) team at the Central Bank of Brazil (BACEN), more specifically the team responsible for the Micro Focus Service Manager software. I was responsible for supporting the DEINF team at the BACEN, more specifically the team responsible for the Micro Focus Service Manager software.',
       skills: 'Scrum · Service Manager · Micro Focus · ITIL · IT Service Management · IT Service Desk · IT Support · IT Operations'
     },
     {
@@ -97,7 +97,7 @@ export class AboutComponent {
       icon: 'fa-code',
       title: 'FRONTEND DEVELOPER - I.T MID-LEVEL ASSISTANT',
       subtitle: 'IT mid-level assistant at Caixa Econômica Federal.​',
-      description: 'I passed the public exam and became a federal civil servant in 2021. Working as front-end developer in the social programs community at Caixa Econômica Federal. The languages/frameworks/technologies I use in the projects I\'m responsible for are: Angular 11, TypeScript, HTML, SCSS, Figma and Azure. I also work as a Scrum Master and substitute IT project coordinator. Skills: HTML5 · Scrum Master · SCSS · Angular · Azure DevOps · Project Management · FIGMA · GIT',
+      description: 'I passed the public exam and became a federal civil servant in 2021. Working as front-end developer in the social programs community at Caixa Econômica Federal. The languages/frameworks/technologies I use in the projects I\'m responsible for are: Angular 11, TypeScript, HTML, SCSS, Figma and Azure. I also work as a Scrum Master and substitute IT project coordinator.',
       skills: 'Angular · TypeScript · HTML · SCSS · Figma · Azure DevOps · Scrum Master · Project Management',
     },
   ];

@@ -37,12 +37,12 @@
 }
 
 .profile-picture {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  border-radius: var(--border-radius-full);
-  border: 4px solid var(--primary-color);
-  box-shadow: var(--shadow);
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .about-skills {

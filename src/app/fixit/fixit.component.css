@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Cocogoose';
-    src: url('../../assets/fonts/Cocogoose-regular.ttf') format('truetype');
+    font-family: 'Raleway';
+    src: url('../../assets/fonts/Raleway.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -25,7 +25,7 @@
     z-index: 1;
     width: 100%;
     margin-top: 100px;
-    font-family: 'Cocogoose', sans-serif;
+    font-family: 'Raleway', sans-serif !important;
     color: white;
 }
 .main-content{

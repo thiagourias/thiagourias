@@ -6,6 +6,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { AboutComponent } from './about/about.component';
 import { FixitComponent } from './fixit/fixit.component';
 import { SuccessComponent } from './success/success.component';
+import { ThisSiteComponent } from './this-site/this-site.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'fixit', component: FixitComponent },
   { path: 'success', component: SuccessComponent },
+  { path: 'thissite', component: ThisSiteComponent },
   { path: '**', component: NotfoundComponent }
 ];
 
