@@ -1,28 +1,32 @@
 <div class="about-properties">
-    <div class="section-header">
-        <h1>ABOUT ME AND CARRER</h1>
-        <p>
-            Thiago Urias is a UX/UI designer and frontend developer passionate about crafting intuitive and visually
-            stunning digital experiences. His goal is to turn ideas into reality by building solutions that not only
-            look great but also work smoothly.
-        </p>
-    </div>
-
-    <div class="about-content">
-        <div class="about-image">
-            <img src="assets/images/picture_thiago.JPEG" alt="Picture of Thiago Urias Hirae" class="profile-picture">
-        </div>
-        <div class="about-skills">
-            <h2>SKILLS</h2>
-            <p *ngFor="let item of skills">
-                <strong>{{ item.skillTitle }}:</strong> {{ item.skillDescription }}
+    <div class="col-9 mrml-auto prpl-zero">
+        <div class="section-header">
+            <h1>ABOUT ME AND CARRER</h1>
+            <p>
+                Thiago Urias is a UX/UI designer and frontend developer passionate about crafting intuitive and visually
+                stunning digital experiences. His goal is to turn ideas into reality by building solutions that not only
+                look great but also work smoothly.
             </p>
         </div>
+
+        <div class="about-content">
+            <div class="about-image">
+                <img src="assets/images/picture_thiago.JPEG" alt="Picture of Thiago Urias Hirae"
+                    class="profile-picture">
+            </div>
+            <div class="about-skills">
+                <h2>SKILLS</h2>
+                <p *ngFor="let item of skills">
+                    <strong>{{ item.skillTitle }}:</strong> {{ item.skillDescription }}
+                </p>
+            </div>
+        </div>
     </div>
+
 </div>
 
 
-<div class="timeline">
+<div class="timeline col-9 mrml-auto prpl-zero">
     <div class="container mrml-zero" [ngClass]="i % 2 === 0 ? 'left' : 'right'"
         *ngFor="let item of timeline; let i = index">
         <div class="date">{{ item.date }}</div>

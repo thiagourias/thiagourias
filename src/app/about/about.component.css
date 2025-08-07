@@ -70,9 +70,6 @@
 
 .timeline {
   position: relative;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
 }
 
 .timeline::after {
@@ -191,6 +188,11 @@
   border-radius: 0 500px 500px 0;
   color: #ffffff;
 }
+
+.container .content:hover {
+  background: #2f2c2d;
+}
+
 
 .container.right .content {
   padding: 2rem 2rem 2rem 5rem;
