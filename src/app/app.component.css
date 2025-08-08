@@ -77,6 +77,10 @@
   animation: animloader 1s linear infinite alternate;
 }
 
+.main-content {
+  flex: 1;
+}
+
 @keyframes animloaderBack {
   0%, 30%, 70% {
     transform: translateY(0px);

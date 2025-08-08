@@ -2,7 +2,7 @@
   <div class="loader"></div>
 </div>
 <app-header *ngIf="!isHome"></app-header>
-<main class="mb-4">
+<main class="mb-pre-footer main-content">
     <router-outlet (activate)="onActivate()"></router-outlet>   
 </main>
-<app-footer *ngIf="!isHome" class="mt-2"></app-footer>
+<app-footer *ngIf="!isHome"></app-footer>

@@ -1,29 +1,6 @@
-@font-face {
-    font-family: 'Minecraft';
-    src: url('../../assets/fonts/Minecraft.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-.text-home{
-    font-family: 'Minecraft', sans-serif !important;
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-
-.text-button {
-    font-family: 'Minecraft', sans-serif !important;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 .retro-container {
-   
-    width: 760px;
+    max-width: 100%;
+    width: 100%;
     margin: 20px auto;
     border: 2px solid #666699;
     background-color: #FFFFFF;
@@ -32,87 +9,80 @@
     font-family: Verdana, Arial, sans-serif;
     font-size: 13px;
     color: #333333;
+    box-sizing: border-box;
 }
 
 .retro-header {
     background-color: #99CCFF;
     color: #000066;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px;
     border-bottom: 1px dashed #6699CC;
 }
 
 .retro-header h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 32px;
+    font-size: 2rem;
     margin: 0;
     text-shadow: 2px 2px #CCEEFF;
 }
 
 .retro-header p {
     font-style: italic;
-    font-size: 11px;
+    font-size: 0.8rem;
     margin: 5px 0 0 0;
 }
 
 .retro-content {
-    padding: 25px;
+    padding: 20px;
     line-height: 1.6;
 }
 
-.retro-content h2, .retro-content h3 {
-    color: #990000;
-    border-bottom: 1px solid #FF9900;
-    padding-bottom: 5px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    font-family: 'Comic Sans MS', cursive;
-}
-
-.retro-content ul {
-    list-style: square;
-    margin-left: 25px;
-    padding: 0;
-    margin-top: 15px;
-}
-
-.retro-content ul li {
-    margin-bottom: 8px;
-}
-
-.retro-content p strong {
-    color: #000099;
-}
-
-.retro-call-to-action {
+.text-home {
+    font-family: 'Minecraft', sans-serif !important;
+    font-size: 1rem;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
 }
 
-.retro-button {
-    display: inline-block;
-    background-color: #009933;
-    color: #FFFFFF;
-    padding: 10px 25px;
-    text-decoration: none;
-    border: 2px outset #006600;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.retro-button:hover {
-    background-color: #00BB44;
-    border: 2px inset #006600;
+.text-button {
+    font-family: 'Minecraft', sans-serif !important;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .retro-footer {
     background-color: #E0E0E0;
     color: #666666;
     text-align: center;
-    font-size: 11px;
-    padding: 10px 0;
+    font-size: 0.7rem;
+    padding: 10px;
     border-top: 1px solid #CCCCCC;
+}
+@media (min-width: 576px) {
+    .retro-container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .retro-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .retro-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .retro-container {
+        max-width: 1140px;
+    }
 }

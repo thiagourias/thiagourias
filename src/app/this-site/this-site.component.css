@@ -9,6 +9,46 @@
   min-height: 300px;
 }
 
+.title {
+  font-size: 1.5rem;
+  grid-area: title;
+  align-self: end;
+  text-transform: uppercase;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.icon {
+  grid-area: icon;
+  font-size: 3rem;
+}
+
+i {
+  color: transparent;
+  background: linear-gradient(to right, var(--grad));
+  background-clip: text;
+  -webkit-background-clip: text; /* Para compatibilidade com Chrome/Safari */
+}
+
+.content {
+  grid-area: content;
+}
+
+.content > *:first-child {
+  margin-top: 0rem;
+}
+
+.content > *:last-child {
+  margin-bottom: 0rem;
+}
+
+.content::after {
+  content: "";
+  grid-area: bar;
+  height: 2px;
+  background-image: linear-gradient(90deg, var(--grad));
+}
+
 .card {
   --grad: red, blue;
   padding: 2.5rem;
@@ -16,57 +56,20 @@
   border-radius: 2rem;
   gap: 1.5rem;
   display: grid;
-  grid-template: 'title icon' 'content content' 'bar bar' / 1fr auto;
+  grid-template-areas:
+    "title icon"
+    "content content"
+    "bar bar";
+  grid-template-columns: 1fr auto;
   font-family: system-ui, sans-serif;
   color: #444447;
   box-shadow:
-    inset -2px 2px hsl(0 0 100% / 1),
-    -20px 20px 40px hsl(0 0 0 / .25);
-
-  .title {
-    font-size: 1.5rem;
-    grid-area: title;
-    align-self: end;
-    text-transform: uppercase;
-    font-weight: 500;
-    word-break: break-all;
-
-  }
-
-  .icon {
-    grid-area: icon;
-    font-size: 3rem;
-
-    >i {
-      color: transparent;
-      background: linear-gradient(to right, var(--grad));
-      background-clip: text;
-    }
-  }
-
-  .content {
-    grid-area: content;
-
-    &>*:first-child {
-      margin-top: 0rem
-    }
-
-    &>*:last-child {
-      margin-bottom: 0rem
-    }
-  }
-
-  &::after {
-    content: "";
-    grid-area: bar;
-    height: 2px;
-    background-image: linear-gradient(90deg, var(--grad));
-  }
+    inset -2px 2px hsl(0 0% 100% / 1),
+    -20px 20px 40px hsl(0 0% 0% / 0.25);
 }
 
 .card:hover {
   background: linear-gradient(to bottom left, #cfd8dc, #dceef4);
-
 }
 
 .div-logo-properties {

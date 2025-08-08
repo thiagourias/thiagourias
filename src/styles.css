@@ -4,6 +4,10 @@
      box-sizing: border-box;
  }
 
+ html {
+  scroll-behavior: smooth;
+}
+
  @font-face {
      font-family: 'Raleway';
      src: url('./assets/fonts/Raleway.ttf') format('truetype');
@@ -71,3 +75,6 @@
      margin-bottom: 80px !important;
  }
 
+ .mb-pre-footer {
+     margin-bottom: 7.5rem !important;
+ }

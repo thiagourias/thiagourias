@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +12,16 @@ export class AppComponent {
   isLoading = true;
   isHome = false;
 
-    constructor(private router: Router) {
+  constructor(private router: Router, private viewportScroller: ViewportScroller) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.isHome = event.urlAfterRedirects === '/' || event.url === '/';
+        this.viewportScroller.scrollToPosition([0, 0]);
       }
     });
   }
 
-onActivate(): void {
+  onActivate(): void {
     setTimeout(() => {
       this.isLoading = false;
     }, 1000);
