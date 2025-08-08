@@ -1,5 +1,16 @@
-<div class="success-container">
-  <h1>Thank You!</h1>
-  <p>Your message has been successfully sent. We’ll get back to you soon.</p>
-  <a routerLink="/" class="back-link">← Return to Home</a>
+<div class="row prpl-zero mrml-zero">
+  <div class="success-container mtmb-custom col-6 mx-auto text-center">
+    <h1 class="mt-5 mb-5">Thank You {{ userName ? ', ' + userName : '' }}!!</h1>
+    <p class="mt-4 mb-4">Your message has been successfully sent. We’ll get back to you soon.</p>
+    <div class="justify-content-center d-flex mb-5 mt-5">
+      <a routerLink="/" target="_blank" class="text-decoration-none">
+        <button class="button-custom" role="button">
+          <span class="text p-3">
+            <i class="fa-solid fa-house"></i>
+            Return to Home
+          </span>
+        </button>
+      </a>
+    </div>
+  </div>
 </div>

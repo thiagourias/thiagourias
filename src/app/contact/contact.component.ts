@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
@@ -7,6 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
+   constructor(private router: Router) {}
   formData = {
     name: '',
     email: '',
@@ -28,7 +30,11 @@ export class ContactComponent {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,
       })
-        .then(() => window.location.href = '/success')
+        .then(() => {
+          this.router.navigate(['/success'], {
+            queryParams: { name: this.formData.name },
+          });
+        })
         .catch((err) => alert('Submission error: ' + err));
     } else {
       alert('Please fill out all fields correctly.');
