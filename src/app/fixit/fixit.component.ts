@@ -44,7 +44,7 @@ export class FixitComponent implements OnInit {
       action: () => this.mailTo()
     },
     {
-      name: 'Download Resume',
+      name: 'Resume',
       icon: 'fa-solid fa-file-arrow-down',
       action: () => this.downloadResume()
     },

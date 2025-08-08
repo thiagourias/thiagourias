@@ -1,40 +1,42 @@
-<div class="banner">
-    <video autoplay muted loop playsinline class="w-100">
-        <source src="assets/videos/background_webm.webm" type="video/webm">
-        Seu navegador não suporta vídeo.
+<div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src="assets/videos/background_webm.webm" type="video/webm" />
+        Your browser does not support the video tag.
     </video>
-    <div class="content" id="content">
-        <div class="row prpl-zero mrml-zero">
-            <div class="col-9 main-content">
-                <div class="row w-100 p-4">
-                    <h1 class="text-center mb-4 mt-4">THIAGO URIAS</h1>
-                    <p class="text-center fade-in mb-3 mt-3" [class.visible]="showP1">UX/UI DESIGNER AND FRONTEND
-                        DEVELOPER.</p>
-                    <p class="text-center fade-in mb-3 mt-3" [class.visible]="showH3">TURNING DREAMS INTO < CODE>.</p>
-                </div>
-
-                <div class="row w-100 p-4">
-                    <div class="col-12 text-center fade-in" [class.visible]="showH4">
-                        <p class="text-center">I am a frontend developer and UX/UI designer with a passion for creating
-                            user-friendly and visually appealing digital experiences. My goal is to turn your ideas into
-                            reality, crafting solutions that not only look great but also function seamlessly.</p>
-                        <p class="text-center">Let's work together to bring your vision to life!</p>
+    <div class="video-overlay">
+        <div class="content" id="content">
+            <div class="row prpl-zero mrml-zero">
+                <div class="col-9 main-content">
+                    <div class="row w-100 p-4">
+                        <h1 class="text-center mb-4 mt-4">THIAGO URIAS</h1>
+                        <p class="text-center fade-in mb-3 mt-3" [class.visible]="showP1">UX/UI DESIGNER AND FRONTEND
+                            DEVELOPER.</p>
+                        <p class="text-center fade-in mb-3 mt-3" [class.visible]="showH3">TURNING DREAMS INTO < CODE>.
+                        </p>
                     </div>
-                </div>
 
-                <div class="row w-100 p-4 mb-4">
-                    <div class="col-12 text-center fade-in" [class.visible]="showH4">
-                        <div class="d-flex justify-content-center flex-wrap gap-3">
-                            <button 
-                            class="button-custom" 
-                            role="button" 
-                            (click)="link.action()"
-                            *ngFor="let link of links; let i = index">
-                                <span class="text p-3">
-                                    <i class="{{link.icon}}"></i>
-                                    {{ link.name }}
-                                </span>
-                            </button>
+                    <div class="row w-100 p-4">
+                        <div class="col-12 text-center fade-in" [class.visible]="showH4">
+                            <p class="text-center">I am a frontend developer and UX/UI designer with a passion for
+                                creating
+                                user-friendly and visually appealing digital experiences. My goal is to turn your ideas
+                                into
+                                reality, crafting solutions that not only look great but also function seamlessly.</p>
+                            <p class="text-center">Let's work together to bring your vision to life!</p>
+                        </div>
+                    </div>
+
+                    <div class="row w-100 p-4 mb-4">
+                        <div class="col-12 text-center fade-in" [class.visible]="showH4">
+                            <div class="d-flex justify-content-center flex-wrap gap-3">
+                                <button class="button-custom" role="button" (click)="link.action()"
+                                    *ngFor="let link of links; let i = index">
+                                    <span class="text p-3">
+                                        <i class="{{link.icon}}"></i>
+                                        {{ link.name }}
+                                    </span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
