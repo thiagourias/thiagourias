@@ -1,7 +1,50 @@
- <div class="erro404-pagina mt-5">
-    <section class="erro404-conteudo">
-      <h1 class="erro404-titulo">404</h1>
-      <p class="erro404-mensagem">Ops... We searched everywhere. Even under the couch. Still no page.</p>
-      <a href="/fixit" class="erro404-botao">Go back to earth</a>
-    </section>
-  </div>
+<div class="error404-page mt-5">
+  <section class="error404-content p-5">
+    <div class="p-2 mt-2 mb-5 col-9 mrml-auto text-center">
+      <h1 class="error404-title mb-4">404 :(</h1>
+      <p class="error404-message">Ops... We searched everywhere. Even under the couch. Still no page.</p>
+      <div class="justify-content-center d-flex">
+        <button class="button-custom" role="button" [routerLink]="['/fixit']">
+          <span class="text p-3">
+            <i class="fa-solid fa-rocket"></i>
+            Go back to Earth
+          </span>
+        </button>
+      </div>
+      <p class="error404-submessage mt-4 mb-2">Or... you can navigate on the most popular pages on this site :) ! Check
+        below.</p>
+      <div class="error404-card-container">
+        <div class="error404-card" *ngFor="let card of cardsMenu; let i = index">
+          <div class="error404-card-face error404-card-face1">
+            <div class="error404-card-content">
+              <img src="{{ card.img }}">
+              <h3>{{ card.title}}</h3>
+            </div>
+          </div>
+          <div class="error404-card-face error404-card-face2">
+            <div class="error404-card-content">
+              <p class="mb-3">{{ card.text}}</p>
+              <div class="text-center justify-content-center d-flex">
+                <button class="button-custom" role="button" [routerLink]="card.route"
+                  *ngIf="!card.route.startsWith('http')">
+                  <span class="text p-3">
+                    <i [ngClass]="card.routeIcon"></i>
+                    {{ card.routeText}}
+                  </span>
+                </button>
+                <a href="{{ card.route }}" target="_blank" *ngIf="card.route.startsWith('http')">
+                  <button class="button-custom" role="button">
+                    <span class="text p-3">
+                      <i [ngClass]="card.routeIcon"></i>
+                      {{ card.routeText}}
+                    </span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

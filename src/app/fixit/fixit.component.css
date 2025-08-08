@@ -4,14 +4,16 @@
     font-weight: normal;
     font-style: normal;
 }
-.banner{
+
+.banner {
     width: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.banner video{
+
+.banner video {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,7 +22,8 @@
     height: 100%;
     z-index: -1;
 }
-.banner .content{
+
+.banner .content {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -28,21 +31,23 @@
     font-family: 'Raleway', sans-serif !important;
     color: white;
 }
-.main-content{
-    background-color: rgba(0, 0, 0, 0.8); 
+
+.main-content {
+    background-color: rgba(0, 0, 0, 0.8);
     display: block;
     margin-right: auto;
     margin-left: auto;
     border-radius: 5px;
 }
+
 .img-thg {
     width: 100%;
-    max-width: 200px;   /* tamanho máximo responsivo */
-    aspect-ratio: 1/1;  /* mantém proporção quadrada */
+    max-width: 200px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    margin: 0 auto;     /* centraliza se necessário */
+    margin: 0 auto;
 }
 
 .fade-in {

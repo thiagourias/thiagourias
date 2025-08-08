@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+interface LinksItem {
+  name: string;
+  icon: string;
+  action: () => void;
+}
+
 @Component({
   selector: 'app-fixit',
   templateUrl: './fixit.component.html',
@@ -21,9 +27,51 @@ export class FixitComponent implements OnInit {
     setTimeout(() => {
       this.showH3 = true;
     }, 2100);
-        setTimeout(() => {
+    setTimeout(() => {
       this.showH4 = true;
     }, 2800);
+  }
+
+  links: LinksItem[] = [
+    {
+      name: 'Linkedin',
+      icon: 'fa-brands fa-linkedin',
+      action: () => this.openLinkedin()
+    },
+    {
+      name: 'Mail Me',
+      icon: 'fa-solid fa-envelope',
+      action: () => this.mailTo()
+    },
+    {
+      name: 'Download Resume',
+      icon: 'fa-solid fa-file-arrow-down',
+      action: () => this.downloadResume()
+    },
+    {
+      name: 'GitHub',
+      icon: 'fa-brands fa-github',
+      action: () => this.openGithub()
+    },
+  ];
+
+  downloadResume(): void {
+    const link = document.createElement('a');
+    link.href = 'assets/resume/RESUME_THIAGO_URIAS.pdf';
+    link.download = 'RESUME_THIAGO_URIAS.pdf';
+    link.target = '_blank';
+    link.click();
+  }
+  openLinkedin(): void {
+    window.open('https://www.linkedin.com/in/thiagourias/', '_blank');
+  }
+
+  mailTo(): void {
+    window.open('mailto:thiagourias_@hotmail.com', '_blank');
+  }
+
+  openGithub(): void {
+    window.open('https://github.com/thiagourias/thiagourias', '_blank');
   }
 
 }
