@@ -97,7 +97,7 @@ export class AboutComponent {
       icon: 'fa-code',
       title: 'FRONTEND DEVELOPER - I.T MID-LEVEL ASSISTANT',
       subtitle: 'IT mid-level assistant at Caixa Econômica Federal.​',
-      description: 'I passed the public exam and became a federal civil servant in 2021. Working as front-end developer in the social programs community at Caixa Econômica Federal. The languages/frameworks/technologies I use in the projects I\'m responsible for are: Angular 11, TypeScript, HTML, SCSS, Figma and Azure. I also work as a Scrum Master and substitute IT project coordinator.',
+      description: 'I passed the public exam and became a federal civil servant in 2021. Working as front-end developer in the social programs community at Caixa Econômica Federal. The languages, frameworks and technologies I use in the projects I\'m responsible for are: Angular 11, TypeScript, HTML, SCSS, Figma and Azure. I also work as a Scrum Master and substitute IT project coordinator.',
       skills: 'Angular · TypeScript · HTML · SCSS · Figma · Azure DevOps · Scrum Master · Project Management',
     },
   ];
