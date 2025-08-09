@@ -10,7 +10,8 @@
 
     <div>
         <div class="row mrml-zero prpl-zero">
-            <div class="col-3 p-2" *ngFor="let item of thisSiteCards; let i = index">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2"
+                *ngFor="let item of thisSiteCards; let i = index">
                 <div class="grid-container">
                     <div class="card">
                         <div class="title color-black">{{item.title}}</div>
@@ -27,7 +28,7 @@
             <p class="color-white">And that's it! If you want to see more details about how I made this website, you can
                 check out the code on my GitHub repository
                 <a href="https://github.com/thiagourias/thiagourias" class="color-white"><i
-                        class="fa-brands fa-github"></i></a>.
+                        class="fa-brands fa-github color-white"></i></a>
             </p>
         </div>
         <div class="text-center mt-3 mb-3 color-white">
@@ -35,7 +36,8 @@
         </div>
         <div class="row mrml-zero prpl-zero text-center mt-5 mb-5">
 
-            <div class="col-3 p-2" *ngFor="let logo of thisSiteLogos; let i = index">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-2"
+                *ngFor="let logo of thisSiteLogos; let i = index">
                 <div class="div-logo-properties">
                     <h3 class="pt-4 pb-2">{{logo.titleLogos}}</h3>
                     <img src="{{logo.image}}" alt="Angular Logo" class="p-4 logo-img-prop" />

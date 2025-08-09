@@ -115,3 +115,6 @@
 .button-custom:hover span {
     background: none;
 }
+.color-white {
+    color: white !important;
+}   
