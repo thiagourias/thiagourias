@@ -1,31 +1,66 @@
-<div class="text-center mt-3 mb-3 color-white">
-  <h1>CONTACT ME</h1>
+<div class="ds-page-wrapper">
+  <div class="ds-header">
+    <h1>CONTACT ME</h1>
+  </div>
+
+  <div class="ds-container">
+    <div class="ds-info-panel">
+      <h2 class="ds-info-title">Mission to Deep Space</h2>
+     <div class="about-image">
+                <img src="assets/images/logo_tuh_transparente.png" alt="Picture of Thiago Urias Hirae"
+                    class="profile-picture">
+            </div>
+      <p class="ds-info-subtitle">The Future Is Here</p>
+    </div>
+
+    <form name="contact" method="POST" netlify netlify-honeypot="bot-field" data-netlify="true"
+      data-netlify-recaptcha="true" (ngSubmit)="onSubmit(form)" #form="ngForm" class="ds-form">
+
+      <h2 class="ds-form-title">Send me a Message!</h2>
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+
+      <ul class="ds-form-list">
+        <li>
+          <label for="ds-name">Name</label>
+          <input type="text" class="ds-input" id="ds-name" name="name" [(ngModel)]="formData.name" #name="ngModel"
+            required minlength="2" />
+          <div class="ds-error" *ngIf="name.invalid && name.touched">
+            <small *ngIf="name.errors?.['required']">Name is required.</small>
+            <small *ngIf="name.errors?.['minlength']">Name must be at least 2 characters.</small>
+          </div>
+        </li>
+
+        <li>
+          <label for="ds-email">Email</label>
+          <input type="email" class="ds-input" id="ds-email" name="email" [(ngModel)]="formData.email" #email="ngModel"
+            required email />
+          <div class="ds-error" *ngIf="email.invalid && email.touched">
+            <small *ngIf="email.errors?.['required']">Email is required.</small>
+            <small *ngIf="email.errors?.['email']">Enter a valid email address.</small>
+          </div>
+        </li>
+
+        <li>
+          <label for="ds-message">Message</label>
+          <textarea id="ds-message" class="ds-input" name="message" [(ngModel)]="formData.message" #message="ngModel"
+            required minlength="10" rows="5"></textarea>
+          <div class="ds-error" *ngIf="message.invalid && message.touched">
+            <small *ngIf="message.errors?.['required']">Message is required.</small>
+            <small *ngIf="message.errors?.['minlength']">Message must be at least 10 characters.</small>
+          </div>
+        </li>
+
+        <li>
+          <div data-netlify-recaptcha="true"></div>
+        </li>
+
+        <li class="ds-button-wrapper">
+          <button type="submit" class="ds-button">Send</button>
+        </li>
+      </ul>
+    </form>
+  </div>
 </div>
-
-<form name="contact" method="POST" netlify netlify-honeypot="bot-field" data-netlify="true"
-  data-netlify-recaptcha="true" (ngSubmit)="onSubmit(form)" #form="ngForm" class="form-container">
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name" [(ngModel)]="formData.name" #name="ngModel" required minlength="2" />
-  <div class="error" *ngIf="name.invalid && name.touched">
-    <small *ngIf="name.errors?.['required']">Name is required.</small>
-    <small *ngIf="name.errors?.['minlength']">Name must be at least 2 characters.</small>
-  </div>
-
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" [(ngModel)]="formData.email" #email="ngModel" required email />
-  <div class="error" *ngIf="email.invalid && email.touched">
-    <small *ngIf="email.errors?.['required']">Email is required.</small>
-    <small *ngIf="email.errors?.['email']">Enter a valid email address.</small>
-  </div>
-
-  <label for="message">Message</label>
-  <textarea id="message" name="message" [(ngModel)]="formData.message" #message="ngModel" required minlength="10"
-    rows="5"></textarea>
-  <div class="error" *ngIf="message.invalid && message.touched">
-    <small *ngIf="message.errors?.['required']">Message is required.</small>
-    <small *ngIf="message.errors?.['minlength']">Message must be at least 10 characters.</small>
-  </div>
-  <div data-netlify-recaptcha="true"></div>
-
-  <button type="submit">Send</button>
-</form>
