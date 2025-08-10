@@ -41,4 +41,14 @@ export class NotfoundComponent {
       img: 'assets/images/notFoundImages/github.png',
     },
   ];
+
+  activeCardIndex: number | null = null;
+
+  setActiveCard(index: number): void {
+    this.activeCardIndex = index;
+  }
+
+  clearActiveCard(): void {
+    this.activeCardIndex = null;
+  }
 }

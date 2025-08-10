@@ -1,3 +1,27 @@
+@media (min-width: 576px) {
+    .retro-container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .retro-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .retro-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .retro-container {
+        max-width: 1140px;
+    }
+}
+
 .retro-container {
     max-width: 100%;
     width: 100%;
@@ -62,27 +86,4 @@
     font-size: 0.7rem;
     padding: 10px;
     border-top: 1px solid #CCCCCC;
-}
-@media (min-width: 576px) {
-    .retro-container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .retro-container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .retro-container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .retro-container {
-        max-width: 1140px;
-    }
 }

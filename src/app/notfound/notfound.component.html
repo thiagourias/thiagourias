@@ -14,7 +14,9 @@
       <p class="error404-submessage mt-4 mb-2">Or... you can navigate on the most popular pages on this site :) ! Check
         below.</p>
       <div class="error404-card-container mb-5">
-        <div class="error404-card mb-2 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" *ngFor="let card of cardsMenu; let i = index">
+        <div class="error404-card mb-5 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
+          *ngFor="let card of cardsMenu; let i = index" [class.active]="activeCardIndex === i"
+          (mouseenter)="setActiveCard(i)" (mouseleave)="clearActiveCard()" (click)="setActiveCard(i)">
           <div class="error404-card-face error404-card-face1">
             <div class="error404-card-content">
               <img src="{{ card.img }}">

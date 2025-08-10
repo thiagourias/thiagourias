@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
-   constructor(private router: Router) {}
+  constructor(private router: Router) { }
   formData = {
     name: '',
     email: '',

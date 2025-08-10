@@ -50,17 +50,17 @@
   }
 
   .small-screen {
-    display: block!important;
+    display: block !important;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1330px) {
-    .big-screen {
+  .big-screen {
     display: none !important;
   }
 
   .small-screen {
-    display: block!important;
+    display: block !important;
   }
 }
 

@@ -1,6 +1,5 @@
 @import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
 
-
 #this-site-cards {
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +9,6 @@
 #this-site-cards>div {
   display: flex;
 }
-
 
 .card {
   flex: 1;
@@ -48,7 +46,6 @@ i {
   background: linear-gradient(to right, var(--grad));
   background-clip: text;
   -webkit-background-clip: text;
-  /* Para compatibilidade com Chrome/Safari */
 }
 
 .content {

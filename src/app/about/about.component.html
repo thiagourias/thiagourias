@@ -3,12 +3,12 @@
         <div class="section-header">
             <h1>ABOUT ME AND CARRER</h1>
             <p>
-                Thiago Urias is a UX/UI designer and frontend developer passionate about crafting intuitive and visually
+                Thiago Urias Hirae is a UX/UI designer and frontend developer passionate about crafting intuitive and
+                visually
                 stunning digital experiences. His goal is to turn ideas into reality by building solutions that not only
                 look great but also work smoothly.
             </p>
         </div>
-
         <div class="about-content">
             <div class="about-image">
                 <img src="assets/images/picture_thiago.jpeg" alt="Picture of Thiago Urias Hirae"
@@ -22,10 +22,7 @@
             </div>
         </div>
     </div>
-
 </div>
-
-
 <div class="timeline col-11 col-sm-11 col-md-11 col-lg-10 col-xl-9 mrml-auto prpl-zero big-screen">
     <div class="container mrml-zero" [ngClass]="i % 2 === 0 ? 'left' : 'right'"
         *ngFor="let item of timeline; let i = index">
@@ -45,10 +42,8 @@
         </div>
     </div>
 </div>
-
 <div class="col-9 mrml-auto prpl-zero small-screen">
-    <div class="custom-container mrml-zero w100"
-        *ngFor="let item of timeline; let i = index">
+    <div class="custom-container mrml-zero w100" *ngFor="let item of timeline; let i = index">
         <div class="date">{{ item.date }}</div>
         <i class="icon fa" [ngClass]="item.icon"></i>
         <div class="content">
