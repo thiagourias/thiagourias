@@ -6,9 +6,6 @@
   align-items: stretch;
 }
 
-#this-site-cards>div {
-  display: flex;
-}
 
 .card {
   flex: 1;

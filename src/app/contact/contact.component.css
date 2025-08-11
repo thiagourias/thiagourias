@@ -10,17 +10,10 @@
     padding: 1.5rem;
   }
 
-  .ds-info-icon {
-    font-size: 4em;
-  }
-
   .ds-header h1 {
     font-size: 2rem;
   }
 
-  .ds-button {
-    width: 100%;
-  }
 }
 
 @media (max-width: 900px) {
@@ -34,13 +27,6 @@
     border-right: none;
   }
 
-  .ds-info-icon {
-    font-size: 5em;
-  }
-
-  .ds-button {
-    width: auto;
-  }
 }
 
 .ds-page-wrapper {
@@ -89,11 +75,6 @@
 .ds-info-subtitle {
   font-size: 18px;
   margin-bottom: 1rem;
-}
-
-.ds-info-icon {
-  font-size: 6em;
-  color: rgba(10, 180, 180, 1);
 }
 
 .ds-form {
@@ -147,20 +128,6 @@ label {
   text-align: center;
 }
 
-.ds-button {
-  padding: 0.75rem 2rem;
-  background-color: rgba(10, 180, 180, 1);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.ds-button:hover {
-  background-color: rgba(10, 150, 150, 1);
-}
 
 .ds-error {
   color: #ff4d4d;

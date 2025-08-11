@@ -5,58 +5,71 @@
     font-style: normal;
 }
 
-.banner {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../assets/fonts/Poppins-Medium.ttf') format('truetype');
 }
 
-.banner video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+@keyframes blinkCaret {
+
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
 }
 
-.banner .content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    margin-top: 100px;
-    font-family: 'Raleway', sans-serif !important;
+@keyframes showChar {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.typewriter {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     color: white;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    border-right: 2px solid white;
+    animation: blinkCaret 0.55s step-end infinite;
 }
 
-.main-content {
-    background-color: rgba(0, 0, 0, 0.8);
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 5px;
-}
-
-.img-thg {
-    width: 100%;
-    max-width: 200px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+.char {
+    display: inline;
+    opacity: 0;
+    animation: showChar 0.05s forwards;
+    animation-fill-mode: forwards;
+    margin: 0;
+    padding: 0;
 }
 
 .fade-in {
     opacity: 0;
-    transition: opacity 1s ease;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .fade-in.visible {
     opacity: 1;
+}
+
+.main-content {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
 }
 
 .video-background {
@@ -85,4 +98,17 @@
     color: white;
     text-align: center;
     padding: 2rem;
+}
+
+.video-background video {
+    filter: blur(8px);
+}
+
+.text-shadow-black {
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
 }

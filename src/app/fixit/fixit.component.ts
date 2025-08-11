@@ -1,9 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 interface LinksItem {
   name: string;
   icon: string;
   action: () => void;
+}
+
+interface Links {
+  text1: string;
+  text2: string;
 }
 
 @Component({
@@ -12,24 +17,36 @@ interface LinksItem {
   styleUrls: ['./fixit.component.css']
 })
 export class FixitComponent implements OnInit {
-  showH1: boolean = false;
   showP1: boolean = false;
-  showH3: boolean = false;
-  showH4: boolean = false;
+  showP2: boolean = false;
+  showP3: boolean = false;
+  showP4: boolean = false;
+  @Input() text: string = '';
+  displayedText: string = '';
+  typingSpeed: number = 100;
+
+
+  texts: Links = {
+    text1: 'Turning  dreams  into  <code></code>',
+    text2: 'UX/UI DESIGNER AND FRONTEND DEVELOPER.'
+  };
 
   ngOnInit() {
-    setTimeout(() => {
-      this.showH1 = true;
-    }, 700);
+    this.text = this.texts.text1;
+    this.displayedText = '';
+    this.startTyping();
     setTimeout(() => {
       this.showP1 = true;
-    }, 1400);
+    }, 3100);
     setTimeout(() => {
-      this.showH3 = true;
-    }, 2100);
+      this.showP2 = true;
+    }, 3500);
     setTimeout(() => {
-      this.showH4 = true;
-    }, 2800);
+      this.showP3 = true;
+    }, 3900);
+    setTimeout(() => {
+      this.showP4 = true;
+    }, 4300);
   }
 
   links: LinksItem[] = [
@@ -74,4 +91,15 @@ export class FixitComponent implements OnInit {
     window.open('https://github.com/thiagourias/thiagourias', '_blank');
   }
 
+  startTyping(): void {
+    let index = 0;
+    const interval = setInterval(() => {
+      const char = this.text.charAt(index);
+      this.displayedText += `<span class="char">${char}</span>`;
+      index++;
+      if (index === this.text.length) {
+        clearInterval(interval);
+      }
+    }, this.typingSpeed);
+  }
 }

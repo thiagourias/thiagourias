@@ -1,21 +1,6 @@
-@media (min-width: 768px) {
-  .header-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo-container {
-    margin-bottom: 0;
-  }
-
-  .nav-links {
-    justify-content: flex-end;
-  }
-}
 
 header {
-  background-color: #222;
+  background-color: transparent;
   color: #fff;
   padding: 1rem;
   width: 100%;
@@ -28,6 +13,7 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 
 .logo-container {
   max-height: 100px;
@@ -58,4 +44,23 @@ header {
 .nav-links a:hover {
   background-color: #444;
   border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .logo-container {
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex: 1;
+  }
 }
